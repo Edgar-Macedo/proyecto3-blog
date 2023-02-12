@@ -13,6 +13,7 @@ const findPostById = async(id) => {
             id : id 
         }
     })
+    return data
 }
 
 const createPost = async(postObj) => {
@@ -39,13 +40,15 @@ const updatePost = async(id, postObj) => {
     return data
 }
 
-const deletePost = async() => {
+const deletePost = async(id) => {
     //? Your code here:
     const data = await Posts.destroy({
         where: {
             id: id,
-        }
+        },
     })
+
+    return data
 }
 
 module.exports = {

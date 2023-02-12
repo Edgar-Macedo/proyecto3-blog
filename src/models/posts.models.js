@@ -5,7 +5,7 @@ const db = require('../utils/database')
 const Posts = db.define('posts', {
     id:{
         type: DataTypes.BIGINT,
-        autoincrement: true,
+        autoIncrement: true,
         primaryKey: true
     },
     content:{
